@@ -1,5 +1,5 @@
 # lonelypotato
-Modified version C++ version of RottenPotatoNG (/https://github.com/foxglovesec/RottenPotatoNG). Only exe version.
+Modified version of RottenPotatoNG C++ (/https://github.com/foxglovesec/RottenPotatoNG). Only exe branch.
 This version includes the API calls to CreateProcesAsUser() and CreateProcessWithTokenW() in order to execute a 
 process passed from command line.
 Command line args are:
