@@ -8,3 +8,4 @@ Command line args are:
 
 I also included a Thread impersonating SYSTEM. See MSFRottenpotato.cpp for more details
 
+Visit also my blog: https://decoder.cloud
