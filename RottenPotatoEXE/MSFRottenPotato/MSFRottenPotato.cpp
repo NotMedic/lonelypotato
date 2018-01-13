@@ -401,6 +401,16 @@ int CMSFRottenPotato::startCOMListener(void) {
 	WSACleanup();
 
 	return 0;
+	
+}
+DWORD GetTokenSessionId(HANDLE TokenHandle)
+{
+    DWORD id = 0, length;
+    BOOL res = GetTokenInformation(TokenHandle, TokenSessionId, &id, sizeof(id), &length);
+    if (res)
+        return id;
+	return -1;
+
 }
 BOOL EnablePriv(HANDLE hToken, LPCTSTR priv)
 
@@ -530,7 +540,8 @@ int wmain(int argc, wchar_t** argv)
 				
 			}
 
-			printf("[+] Elevated Token tye:%d\n", ptg);
+			printf("[+] Elevated Token type:%d\n", ptg);
+			printf("Session of Elevated Token: %d\n", GetTokenSessionId(hToken));
 			/*
 			//crea un thread impersonando SYSTEM
 			HANDLE hThread;
