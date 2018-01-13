@@ -620,7 +620,7 @@ int wmain(int argc, wchar_t** argv)
 					0,
 					cmdPath,
 					args,
-					CREATE_NEW_CONSOLE,
+				    0,
 					NULL,
 					NULL,
 					&si,
